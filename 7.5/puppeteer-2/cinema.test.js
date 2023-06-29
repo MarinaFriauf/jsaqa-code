@@ -47,8 +47,8 @@ describe("Positives Tests ", () => {
   });
 });
 
-describe("Negative Test Suite", () => {
-  it("should not accept an already booked seat", async () => {
+describe("Negative Test", () => {
+  it("should not accept an booked seat", async () => {
     const selectFirstFilm = '[data-seance-id="176"]';
 
     await clickElement(page, selectFirstFilm);
