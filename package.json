@@ -1,8 +1,12 @@
 {
   "devDependencies": {
-    "jest": "^27.3.1"
+    "jest": "^27.5.1"
   },
   "dependencies": {
-    "jsaqa_3_3": "file:7.4/puppeteer"
+    "chai": "^4.3.7",
+    "cucumber": "^6.0.7",
+    "jest-puppeteer": "^9.0.0",
+    "jsaqa_3_3": "file:7.4/puppeteer",
+    "puppeteer": "^20.7.3"
   }
 }
