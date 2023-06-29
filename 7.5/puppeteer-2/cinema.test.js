@@ -33,7 +33,7 @@ describe("Positives Tests ", () => {
   });
 
   it("should get e-ticket", async () => {
-    const selectSecondFilm = '[data-seance-id="175"]';
+    const selectSecondFilm = '[data-seance-id="176"]';
     const selectButton = '[class="acceptin-button"]';
     const acceptButton = '[class="acceptin-button"]';
     const expectText = "Электронный билет";
@@ -49,7 +49,7 @@ describe("Positives Tests ", () => {
 
 describe("Negative Test Suite", () => {
   it("should not accept an already booked seat", async () => {
-    const selectFirstFilm = '[data-seance-id="175"]';
+    const selectFirstFilm = '[data-seance-id="176"]';
 
     await clickElement(page, selectFirstFilm);
     await clickOnSelectedPlaceByIndex(page, 0, 0);
