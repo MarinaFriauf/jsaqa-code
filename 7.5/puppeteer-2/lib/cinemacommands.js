@@ -8,17 +8,6 @@ module.exports = {
     }
   },
 
-  clickOnSelectedPlaceByIndex: async function (page, rowIndex, placeIndex) {
-    await page.waitForSelector('[class="buying-scheme__wrapper"]'); 
-    const rowSelector = await page.$$('[class="buying-scheme__row"]');
-    const placeSelector = await rowSelector[rowIndex].$$('[class*="buying-scheme__chair"]');
-    try {
-      await placeSelector[placeIndex].click();
-    } catch (error) {
-      throw new Error(`Selector is not clickable: ${placeSelector[placeIndex]}`);
-    }
-  },
-
   getText: async function (page, selector) {
     try {
       await page.waitForSelector(selector);
@@ -36,6 +25,17 @@ module.exports = {
       await page.keyboard.press("Enter");
     } catch (error) {
       throw new Error(`Not possible to type text for selector: ${selector}`);
+    }
+  },
+  
+  clickOnSelectedPlaceByIndex: async function (page, rowIndex, placeIndex) {
+    await page.waitForSelector('[class="buying-scheme__wrapper"]'); 
+    const rowSelector = await page.$$('[class="buying-scheme__row"]');
+    const placeSelector = await rowSelector[rowIndex].$$('[class*="buying-scheme__chair"]');
+    try {
+      await placeSelector[placeIndex].click();
+    } catch (error) {
+      throw new Error(`Selector is not clickable: ${placeSelector[placeIndex]}`);
     }
   },
 };

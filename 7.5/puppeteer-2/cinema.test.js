@@ -1,8 +1,8 @@
 const { expect } = require("chai");
 const {
   clickElement,
-  clickOnSelectedPlaceByIndex,
   getText,
+  clickOnSelectedPlaceByIndex,
 } = require("./lib/cinemacommands.js");
 
 let page;
