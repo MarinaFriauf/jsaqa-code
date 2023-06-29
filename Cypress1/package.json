@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "cypress open",
     "test_chrome": "cypress open --browser chrome",
     "test_chrome_h": "cypress run --browser chrome --headless",
     "test_firefox": "cypress open --browser firefox --config-file cypress_mobile.config.js",
