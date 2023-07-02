@@ -25,17 +25,17 @@ After(async function () {
   }
 });
 
-Given("пользователь находится на странице {string}", async function (string) {
+Given("user is on {string} page", async function (string) {
   return await this.page.goto(`https://netology.ru${string}`, {
     setTimeout: 60000,
   });
 });
 
-When("поиск {string} в поисковой строке", async function (string) {
+When("user search by {string}", async function (string) {
   return await putText(this.page, "input", string);
 });
 
-Then("пользователь видит предложенный курс {string}", async function (string) {
+Then("user sees the course suggested {string}", async function (string) {
   const actual = await getText(this.page, "a[data-name]");
   const expected = await string;
   expect(actual).contains(expected);

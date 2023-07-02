@@ -1,9 +1,8 @@
-Feature: Поиск курса и домашняя работа
-
-    # Scenario: Следует искать по тексту
-    #     Given пользователь находится на странице "/navigation"
-    #     When поиск "тестировщик" в поисковой строке
-    #     Then пользователь видит предложенный курс "Тестировщик ПО"
+Feature: Search a course
+    Scenario: Should search by text
+        Given user is on "/navigation" page
+        When user search by "тестировщик"
+        Then user sees the course suggested "Тестировщик ПО"
     
     Scenario: Open reservation on chosen date and time
         Given I am on the reservation page "/index.php"
