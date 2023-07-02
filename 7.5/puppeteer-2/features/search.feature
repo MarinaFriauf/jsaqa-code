@@ -1,9 +1,9 @@
 Feature: Search a course
-   #Scenario: Should search by text
-       #Given user is on "/navigation" page
+    #Scenario: Should search by text
+       # Given user is on "/navigation" page
         #When user search by "тестировщик"
         #Then user sees the course suggested "Тестировщик ПО"
-
+    
     Scenario: Open reservation on chosen date and time
         Given I am on the reservation page "/index.php"
         When I select the date "Пн"
